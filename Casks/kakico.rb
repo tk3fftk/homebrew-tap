@@ -1,6 +1,6 @@
 cask "kakico" do
-  version "0.1.0"
-  sha256 "183ae6e497ee5ff9c7658d792c5ecb2907e028c2240a19948f13c60b3128c868"
+  version "0.1.1"
+  sha256 "f840efb3e74525148123f922c2eda572a4524599fdee763d0ab35e22561e9bee"
 
   url "https://github.com/tk3fftk/kakico/releases/download/v#{version}/Kakico-#{version}.zip"
   name "Kakico"
