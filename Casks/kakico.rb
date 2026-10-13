@@ -20,9 +20,9 @@ cask "kakico" do
   # Kakico is ad-hoc signed (no Apple Developer ID, not notarized). On Apple
   # Silicon, a quarantined ad-hoc-signed app is rejected by Gatekeeper with a
   # misleading "app is damaged" dialog, so remove the quarantine attribute.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Kakico.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args: ["-dr", "com.apple.quarantine", "{{appdir}}/Kakico.app"]
   end
 
   zap trash: [
